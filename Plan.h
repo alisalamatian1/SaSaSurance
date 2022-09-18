@@ -8,16 +8,19 @@
 
 class Plan {
 protected:
-    int coverage;
+    std::string sector;
+    std::string insuranceName;
+    double coverage;
     double creditLimit;
-    void decreaseCredit(int usedAmount);
 
 public:
-    Plan(int coverage, double creditLimit) {
-        this->coverage = coverage;
-        this->creditLimit = creditLimit;
-    }
-    int getCoverage();
+    Plan(double coverage, double creditLimit, std::string insuranceName);
+    std::string getInsuranceName();
+    bool decreaseCredit(double usedAmount);
+    double getCoverage();
+    std::string getSector();
+
+    double getCreditLimit() const;
 };
 
 #endif //SASASURANCE2_PLAN_H

@@ -4,18 +4,20 @@
 
 #ifndef SASASURANCE2_BUSINESS_H
 #define SASASURANCE2_BUSINESS_H
-#include "client.h"
+#include "Insurance.h"
 #include <vector>
 
 class Business {
 private:
-    string name;
-    string sector;
+    std::string name;
+    std::string sector;
     vector<Client> clients;
+    vector<Insurance> insurances;
 public:
     Business(string name, string sector);
     Business(string name, string sector, vector<Client> clients);
     void setClients(vector<Client> clients);
-    void raiseRequest(int cost, Client client);
+    bool raiseRequest(double cost, Client client);
+    void addInsurance(Insurance insurance);
 };
 #endif //SASASURANCE2_BUSINESS_H

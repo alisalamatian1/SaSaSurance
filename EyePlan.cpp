@@ -4,6 +4,10 @@
 
 #include "EyePlan.h"
 
-int Plan::getCoverage() {
+double Plan::getCoverage() {
     return this->coverage;
+}
+
+EyePlan::EyePlan(int coverage, double creditLimit, std::string insuranceName) : Plan(coverage, creditLimit, insuranceName){
+    this->sector = type;
 }

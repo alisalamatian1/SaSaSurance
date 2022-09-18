@@ -9,8 +9,8 @@
 
 class EyePlan : public Plan {
 public:
-    EyePlan(int coverage, double creditLimit) : Plan(coverage, creditLimit){
-    }
+    const std::string type = "Eye";
+    EyePlan(int coverage, double creditLimit, std::string insuranceName);
 
 };
 

@@ -73,6 +73,18 @@ build CMakeFiles/SaSaSurance2.dir/EyePlan.cpp.o: CXX_COMPILER__SaSaSurance2_Debu
   OBJECT_DIR = CMakeFiles/SaSaSurance2.dir
   OBJECT_FILE_DIR = CMakeFiles/SaSaSurance2.dir
 
+build CMakeFiles/SaSaSurance2.dir/Insurance.cpp.o: CXX_COMPILER__SaSaSurance2_Debug /Users/alisalamatian/Documents/SideProject/SaSaSurance2/Insurance.cpp || cmake_object_order_depends_target_SaSaSurance2
+  DEP_FILE = CMakeFiles/SaSaSurance2.dir/Insurance.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+  OBJECT_DIR = CMakeFiles/SaSaSurance2.dir
+  OBJECT_FILE_DIR = CMakeFiles/SaSaSurance2.dir
+
+build CMakeFiles/SaSaSurance2.dir/Plan.cpp.o: CXX_COMPILER__SaSaSurance2_Debug /Users/alisalamatian/Documents/SideProject/SaSaSurance2/Plan.cpp || cmake_object_order_depends_target_SaSaSurance2
+  DEP_FILE = CMakeFiles/SaSaSurance2.dir/Plan.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+  OBJECT_DIR = CMakeFiles/SaSaSurance2.dir
+  OBJECT_FILE_DIR = CMakeFiles/SaSaSurance2.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target SaSaSurance2
@@ -81,7 +93,7 @@ build CMakeFiles/SaSaSurance2.dir/EyePlan.cpp.o: CXX_COMPILER__SaSaSurance2_Debu
 #############################################
 # Link the executable SaSaSurance2
 
-build SaSaSurance2: CXX_EXECUTABLE_LINKER__SaSaSurance2_Debug CMakeFiles/SaSaSurance2.dir/main.cpp.o CMakeFiles/SaSaSurance2.dir/Client.cpp.o CMakeFiles/SaSaSurance2.dir/Business.cpp.o CMakeFiles/SaSaSurance2.dir/EyePlan.cpp.o
+build SaSaSurance2: CXX_EXECUTABLE_LINKER__SaSaSurance2_Debug CMakeFiles/SaSaSurance2.dir/main.cpp.o CMakeFiles/SaSaSurance2.dir/Client.cpp.o CMakeFiles/SaSaSurance2.dir/Business.cpp.o CMakeFiles/SaSaSurance2.dir/EyePlan.cpp.o CMakeFiles/SaSaSurance2.dir/Insurance.cpp.o CMakeFiles/SaSaSurance2.dir/Plan.cpp.o
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
   OBJECT_DIR = CMakeFiles/SaSaSurance2.dir
   POST_BUILD = :
