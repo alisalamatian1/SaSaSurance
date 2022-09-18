@@ -1,0 +1,3 @@
+/Users/alisalamatian/Documents/SideProject/SaSaSurance2/cmake-build-debug/CMakeFiles/SaSaSurance2.dir
+/Users/alisalamatian/Documents/SideProject/SaSaSurance2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/alisalamatian/Documents/SideProject/SaSaSurance2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

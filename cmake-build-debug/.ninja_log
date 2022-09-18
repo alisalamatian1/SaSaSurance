@@ -1,0 +1,10 @@
+# ninja log v5
+3	901	1663458180745585998	CMakeFiles/SaSaSurance2.dir/Client.cpp.o	87a55582b1ac4f53
+1075	1175	1663458181027374863	SaSaSurance2	b1876a1de0266e5d
+2	1066	1663458180914272376	CMakeFiles/SaSaSurance2.dir/main.cpp.o	d5a46ed399b1cd80
+4	1075	1663458180924413509	CMakeFiles/SaSaSurance2.dir/Business.cpp.o	5a307a284a6d371b
+8	859	1663459495326570758	CMakeFiles/SaSaSurance2.dir/EyePlan.cpp.o	212acbee970cce2c
+7	925	1663459495395209654	CMakeFiles/SaSaSurance2.dir/Client.cpp.o	87a55582b1ac4f53
+6	1074	1663459495544922968	CMakeFiles/SaSaSurance2.dir/main.cpp.o	d5a46ed399b1cd80
+8	1086	1663459495557950288	CMakeFiles/SaSaSurance2.dir/Business.cpp.o	5a307a284a6d371b
+1086	1184	1663459495660565898	SaSaSurance2	79549bab3e8102fe
