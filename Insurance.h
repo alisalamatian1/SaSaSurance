@@ -1,10 +1,7 @@
 //
 // Created by ali salamatian on 2022-09-17.
 //
-
-#ifndef SASASURANCE2_INSURANCE_H
-#define SASASURANCE2_INSURANCE_H
-
+#pragma once
 #include "Client.h"
 
 class Insurance {
@@ -22,4 +19,3 @@ public:
 
     void setName(const string &name);
 };
-#endif //SASASURANCE2_INSURANCE_H

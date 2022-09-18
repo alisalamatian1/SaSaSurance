@@ -1,13 +1,12 @@
 //
 // Created by ali salamatian on 2022-09-17.
 //
-
-#ifndef SASASURANCE2_CLIENT_H
-#define SASASURANCE2_CLIENT_H
+#pragma once
 
 #include <vector>
 #include "Plan.h"
-// #include "Insurance.h"
+class Insurance;
+
 using namespace std;
 
 class Client {
@@ -16,15 +15,15 @@ private:
     string name;
     string password;
     vector<Plan> plans;
-    // Insurance insurance;
+    Insurance* insurance;
 public:
     Client(string name);
     string getName();
     vector<Plan> getPlans();
     string getId();
     string getPassword();
-    // Insurance getInsurance();
-    // void setInsurance(Insurance insurance);
+    Insurance* getInsurance() const;
+    void setInsurance(Insurance* insurance);
 
     void addToPlan (Plan plan);
 //
@@ -38,4 +37,3 @@ public:
 //
 //    void setInsurance(const Insurance &insurance);
 };
-#endif //SASASURANCE2_CLIENT_H

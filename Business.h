@@ -1,9 +1,7 @@
 //
 // Created by ali salamatian on 2022-09-17.
 //
-
-#ifndef SASASURANCE2_BUSINESS_H
-#define SASASURANCE2_BUSINESS_H
+#pragma once
 #include "Insurance.h"
 #include <vector>
 
@@ -20,4 +18,3 @@ public:
     bool raiseRequest(double cost, Client client);
     void addInsurance(Insurance insurance);
 };
-#endif //SASASURANCE2_BUSINESS_H

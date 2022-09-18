@@ -1,9 +1,7 @@
 //
 // Created by ali salamatian on 2022-09-17.
 //
-
-#ifndef SASASURANCE2_PLAN_H
-#define SASASURANCE2_PLAN_H
+#pragma once
 #include <string>
 
 class Plan {
@@ -22,5 +20,3 @@ public:
 
     double getCreditLimit() const;
 };
-
-#endif //SASASURANCE2_PLAN_H

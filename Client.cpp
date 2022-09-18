@@ -3,6 +3,7 @@
 //
 
 #include "Client.h"
+#include "Insurance.h"
 
 Client::Client(string name) {
     this->name = name;
@@ -24,9 +25,13 @@ string Client::getPassword() {
     return password;
 }
 
-//Insurance Client::getInsurance() {
-//    return insurance;
-//}
+Insurance* Client::getInsurance() const {
+    return insurance;
+}
+
+void Client::setInsurance(Insurance* insurance) {
+    this->insurance = insurance;
+}
 
 void Client::addToPlan(Plan plan) {
     plans.push_back(plan);
@@ -51,6 +56,3 @@ void Client::addToPlan(Plan plan) {
 //    Client::insurance = insurance;
 //}
 
-//void Client::setInsurance(Insurance insurance) {
-//    this->insurance = insurance;
-//}

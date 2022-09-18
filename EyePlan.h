@@ -1,10 +1,7 @@
 //
 // Created by ali salamatian on 2022-09-17.
 //
-
-#ifndef SASASURANCE2_EYEPLAN_H
-#define SASASURANCE2_EYEPLAN_H
-
+#pragma once
 #include "Plan.h"
 
 class EyePlan : public Plan {
@@ -14,4 +11,3 @@ public:
 
 };
 
-#endif //SASASURANCE2_EYEPLAN_H
