@@ -7,14 +7,11 @@
 
 Client::Client(string name) {
     this->name = name;
+    this->insurance = nullptr;
 }
 
 string Client::getName() {
     return this->name;
-}
-
-vector<Plan> Client::getPlans() {
-    return this->plans;
 }
 
 string Client::getId() {
@@ -30,12 +27,23 @@ Insurance* Client::getInsurance() const {
 }
 
 void Client::setInsurance(Insurance* insurance) {
-    this->insurance = insurance;
+    if (this->insurance == nullptr) {
+        this->insurance = insurance;
+        insurance->addClient(this);
+    } else if (this->insurance != insurance) {
+        removeInsurance(this->insurance);
+        this->insurance = insurance;
+        insurance->addClient(this);
+    }
 }
 
-void Client::addToPlan(Plan plan) {
-    plans.push_back(plan);
+void Client::removeInsurance(Insurance *insurance) {
+    if (insurance != nullptr) {
+        insurance->removeClient(this);
+        insurance = nullptr;
+    }
 }
+
 //void Client::setId(const string &id) {
 //    Client::id = id;
 //}

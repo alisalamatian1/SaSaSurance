@@ -4,18 +4,15 @@
 
 #include "Plan.h"
 
-Plan::Plan(double coverage, double creditLimit, std::string insuranceName) {
+Plan::Plan(double coverage, double creditLimit) {
     this->coverage = coverage;
     this->creditLimit = creditLimit;
-    this->insuranceName = insuranceName;
-}
-
-std::string Plan::getInsuranceName() {
-    return insuranceName;
 }
 
 bool Plan::decreaseCredit(double usedAmount) {
     if (coverage - usedAmount < 0) {
+        // todo: after adding the money transfer functionality, we should set the coverage to 0 and send
+        // todo: the difference to 0 to the business and throw a warning that the coverage was not enough for the ask
         return false;
     }
     this->coverage -= usedAmount;

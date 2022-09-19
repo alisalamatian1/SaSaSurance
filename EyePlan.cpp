@@ -8,6 +8,6 @@ double Plan::getCoverage() {
     return this->coverage;
 }
 
-EyePlan::EyePlan(int coverage, double creditLimit, std::string insuranceName) : Plan(coverage, creditLimit, insuranceName){
+EyePlan::EyePlan(int coverage, double creditLimit) : Plan(coverage, creditLimit){
     this->sector = type;
 }

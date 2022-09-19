@@ -4,7 +4,7 @@
 #pragma once
 
 #include <vector>
-#include "Plan.h"
+#include <string>
 class Insurance;
 
 using namespace std;
@@ -14,18 +14,16 @@ private:
     string id;
     string name;
     string password;
-    vector<Plan> plans;
     Insurance* insurance;
 public:
     Client(string name);
     string getName();
-    vector<Plan> getPlans();
     string getId();
     string getPassword();
     Insurance* getInsurance() const;
     void setInsurance(Insurance* insurance);
-
-    void addToPlan (Plan plan);
+    bool raiseRequest(double cost, Client client);
+    void removeInsurance(Insurance* insurance);
 //
 //    void setId(const string &id);
 //

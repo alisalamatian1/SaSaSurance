@@ -7,16 +7,12 @@
 class Plan {
 protected:
     std::string sector;
-    std::string insuranceName;
     double coverage;
     double creditLimit;
-
 public:
-    Plan(double coverage, double creditLimit, std::string insuranceName);
-    std::string getInsuranceName();
+    Plan(double coverage, double creditLimit);
     bool decreaseCredit(double usedAmount);
     double getCoverage();
     std::string getSector();
-
     double getCreditLimit() const;
 };

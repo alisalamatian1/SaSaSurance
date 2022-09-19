@@ -10,11 +10,9 @@ private:
     std::string name;
     std::string sector;
     vector<Client> clients;
-    vector<Insurance> insurances;
 public:
     Business(string name, string sector);
     Business(string name, string sector, vector<Client> clients);
     void setClients(vector<Client> clients);
     bool raiseRequest(double cost, Client client);
-    void addInsurance(Insurance insurance);
 };
