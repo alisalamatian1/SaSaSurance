@@ -15,6 +15,9 @@ My dentist also had to wait weeks for the request to be processed; I believe aut
 -sign up for an insurance and have different plans
 -track my coverage
 
-###As a business, I want to raise a request to collect money from my customer's insurance
+### As a business, I want to raise a request to collect money from my customer's insurance
 
-###As an insurance, I want to process the request and update my customer's plans by transfering money to the business account.
+### As an insurance, I want to process the request and update my customer's plans by transfering money to the business account.
+
+### UML diagram:
+<img width="744" alt="image" src="https://user-images.githubusercontent.com/81648012/190938649-9f5a8e25-7056-4a52-8ac1-6e756b52a59b.png">
