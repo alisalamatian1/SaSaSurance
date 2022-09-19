@@ -49,41 +49,41 @@ cmake_ninja_workdir = /Users/alisalamatian/Documents/SideProject/SaSaSurance2/cm
 
 build cmake_object_order_depends_target_SaSaSurance2: phony || CMakeFiles/SaSaSurance2.dir
 
-build CMakeFiles/SaSaSurance2.dir/main.cpp.o: CXX_COMPILER__SaSaSurance2_Debug /Users/alisalamatian/Documents/SideProject/SaSaSurance2/main.cpp || cmake_object_order_depends_target_SaSaSurance2
-  DEP_FILE = CMakeFiles/SaSaSurance2.dir/main.cpp.o.d
+build CMakeFiles/SaSaSurance2.dir/src/main.cpp.o: CXX_COMPILER__SaSaSurance2_Debug /Users/alisalamatian/Documents/SideProject/SaSaSurance2/src/main.cpp || cmake_object_order_depends_target_SaSaSurance2
+  DEP_FILE = CMakeFiles/SaSaSurance2.dir/src/main.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
   OBJECT_DIR = CMakeFiles/SaSaSurance2.dir
-  OBJECT_FILE_DIR = CMakeFiles/SaSaSurance2.dir
+  OBJECT_FILE_DIR = CMakeFiles/SaSaSurance2.dir/src
 
-build CMakeFiles/SaSaSurance2.dir/Client.cpp.o: CXX_COMPILER__SaSaSurance2_Debug /Users/alisalamatian/Documents/SideProject/SaSaSurance2/Client.cpp || cmake_object_order_depends_target_SaSaSurance2
-  DEP_FILE = CMakeFiles/SaSaSurance2.dir/Client.cpp.o.d
+build CMakeFiles/SaSaSurance2.dir/src/client/Client.cpp.o: CXX_COMPILER__SaSaSurance2_Debug /Users/alisalamatian/Documents/SideProject/SaSaSurance2/src/client/Client.cpp || cmake_object_order_depends_target_SaSaSurance2
+  DEP_FILE = CMakeFiles/SaSaSurance2.dir/src/client/Client.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
   OBJECT_DIR = CMakeFiles/SaSaSurance2.dir
-  OBJECT_FILE_DIR = CMakeFiles/SaSaSurance2.dir
+  OBJECT_FILE_DIR = CMakeFiles/SaSaSurance2.dir/src/client
 
-build CMakeFiles/SaSaSurance2.dir/Business.cpp.o: CXX_COMPILER__SaSaSurance2_Debug /Users/alisalamatian/Documents/SideProject/SaSaSurance2/Business.cpp || cmake_object_order_depends_target_SaSaSurance2
-  DEP_FILE = CMakeFiles/SaSaSurance2.dir/Business.cpp.o.d
+build CMakeFiles/SaSaSurance2.dir/src/business/Business.cpp.o: CXX_COMPILER__SaSaSurance2_Debug /Users/alisalamatian/Documents/SideProject/SaSaSurance2/src/business/Business.cpp || cmake_object_order_depends_target_SaSaSurance2
+  DEP_FILE = CMakeFiles/SaSaSurance2.dir/src/business/Business.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
   OBJECT_DIR = CMakeFiles/SaSaSurance2.dir
-  OBJECT_FILE_DIR = CMakeFiles/SaSaSurance2.dir
+  OBJECT_FILE_DIR = CMakeFiles/SaSaSurance2.dir/src/business
 
-build CMakeFiles/SaSaSurance2.dir/EyePlan.cpp.o: CXX_COMPILER__SaSaSurance2_Debug /Users/alisalamatian/Documents/SideProject/SaSaSurance2/EyePlan.cpp || cmake_object_order_depends_target_SaSaSurance2
-  DEP_FILE = CMakeFiles/SaSaSurance2.dir/EyePlan.cpp.o.d
+build CMakeFiles/SaSaSurance2.dir/src/insurance/EyePlan.cpp.o: CXX_COMPILER__SaSaSurance2_Debug /Users/alisalamatian/Documents/SideProject/SaSaSurance2/src/insurance/EyePlan.cpp || cmake_object_order_depends_target_SaSaSurance2
+  DEP_FILE = CMakeFiles/SaSaSurance2.dir/src/insurance/EyePlan.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
   OBJECT_DIR = CMakeFiles/SaSaSurance2.dir
-  OBJECT_FILE_DIR = CMakeFiles/SaSaSurance2.dir
+  OBJECT_FILE_DIR = CMakeFiles/SaSaSurance2.dir/src/insurance
 
-build CMakeFiles/SaSaSurance2.dir/Insurance.cpp.o: CXX_COMPILER__SaSaSurance2_Debug /Users/alisalamatian/Documents/SideProject/SaSaSurance2/Insurance.cpp || cmake_object_order_depends_target_SaSaSurance2
-  DEP_FILE = CMakeFiles/SaSaSurance2.dir/Insurance.cpp.o.d
+build CMakeFiles/SaSaSurance2.dir/src/insurance/Insurance.cpp.o: CXX_COMPILER__SaSaSurance2_Debug /Users/alisalamatian/Documents/SideProject/SaSaSurance2/src/insurance/Insurance.cpp || cmake_object_order_depends_target_SaSaSurance2
+  DEP_FILE = CMakeFiles/SaSaSurance2.dir/src/insurance/Insurance.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
   OBJECT_DIR = CMakeFiles/SaSaSurance2.dir
-  OBJECT_FILE_DIR = CMakeFiles/SaSaSurance2.dir
+  OBJECT_FILE_DIR = CMakeFiles/SaSaSurance2.dir/src/insurance
 
-build CMakeFiles/SaSaSurance2.dir/Plan.cpp.o: CXX_COMPILER__SaSaSurance2_Debug /Users/alisalamatian/Documents/SideProject/SaSaSurance2/Plan.cpp || cmake_object_order_depends_target_SaSaSurance2
-  DEP_FILE = CMakeFiles/SaSaSurance2.dir/Plan.cpp.o.d
+build CMakeFiles/SaSaSurance2.dir/src/insurance/Plan.cpp.o: CXX_COMPILER__SaSaSurance2_Debug /Users/alisalamatian/Documents/SideProject/SaSaSurance2/src/insurance/Plan.cpp || cmake_object_order_depends_target_SaSaSurance2
+  DEP_FILE = CMakeFiles/SaSaSurance2.dir/src/insurance/Plan.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
   OBJECT_DIR = CMakeFiles/SaSaSurance2.dir
-  OBJECT_FILE_DIR = CMakeFiles/SaSaSurance2.dir
+  OBJECT_FILE_DIR = CMakeFiles/SaSaSurance2.dir/src/insurance
 
 
 # =============================================================================
@@ -93,7 +93,7 @@ build CMakeFiles/SaSaSurance2.dir/Plan.cpp.o: CXX_COMPILER__SaSaSurance2_Debug /
 #############################################
 # Link the executable SaSaSurance2
 
-build SaSaSurance2: CXX_EXECUTABLE_LINKER__SaSaSurance2_Debug CMakeFiles/SaSaSurance2.dir/main.cpp.o CMakeFiles/SaSaSurance2.dir/Client.cpp.o CMakeFiles/SaSaSurance2.dir/Business.cpp.o CMakeFiles/SaSaSurance2.dir/EyePlan.cpp.o CMakeFiles/SaSaSurance2.dir/Insurance.cpp.o CMakeFiles/SaSaSurance2.dir/Plan.cpp.o
+build SaSaSurance2: CXX_EXECUTABLE_LINKER__SaSaSurance2_Debug CMakeFiles/SaSaSurance2.dir/src/main.cpp.o CMakeFiles/SaSaSurance2.dir/src/client/Client.cpp.o CMakeFiles/SaSaSurance2.dir/src/business/Business.cpp.o CMakeFiles/SaSaSurance2.dir/src/insurance/EyePlan.cpp.o CMakeFiles/SaSaSurance2.dir/src/insurance/Insurance.cpp.o CMakeFiles/SaSaSurance2.dir/src/insurance/Plan.cpp.o
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
   OBJECT_DIR = CMakeFiles/SaSaSurance2.dir
   POST_BUILD = :

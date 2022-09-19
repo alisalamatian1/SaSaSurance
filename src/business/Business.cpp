@@ -4,7 +4,7 @@
 
 #include "Business.h"
 #include <iostream>
-#include "AmountExceedException.h"
+#include "../AmountExceedException.h"
 
 Business::Business(string name, string sector) {
     this->name = name;

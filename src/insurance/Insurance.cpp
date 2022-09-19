@@ -3,7 +3,7 @@
 //
 
 #include "Insurance.h"
-#include "AmountExceedException.h"
+#include "../AmountExceedException.h"
 
 Insurance::Insurance(string name) {
     this->name = name;

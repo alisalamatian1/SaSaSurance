@@ -1,7 +1,7 @@
 #include <iostream>
-#include "Client.h"
-#include "Business.h"
-#include "EyePlan.h"
+#include "client/Client.h"
+#include "business/Business.h"
+#include "insurance/EyePlan.h"
 
 int main() {
     // making a client

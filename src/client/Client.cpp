@@ -3,7 +3,7 @@
 //
 
 #include "Client.h"
-#include "Insurance.h"
+#include "../insurance/Insurance.h"
 
 Client::Client(string name) {
     this->name = name;
