@@ -22,11 +22,11 @@ string Client::getPassword() {
     return password;
 }
 
-Insurance* Client::getInsurance() const {
+Insurance* Client::getInsurance() {
     return insurance;
 }
 
-void Client::setInsurance(Insurance* insurance) {
+void Client::subscribeInsurance(Insurance* insurance) {
     if (this->insurance == nullptr) {
         this->insurance = insurance;
         insurance->addClient(this);
@@ -44,6 +44,23 @@ void Client::removeInsurance(Insurance *insurance) {
     }
 }
 
+void Client::payFees(double fee) {
+    this->money -= fee;
+    this->insurance->addMoney(fee);
+}
+
+void Client::addMoney(double claimedMoney) {
+    this->money += claimedMoney;
+}
+
+Client::Client(const string &id, const string &name, const string &password, Insurance *insurance, double money) : id(
+        id), name(name), password(password), insurance(insurance), money(money) {}
+
+Client::Client(const string &name, const string &password, Insurance *insurance, double money) : name(name),
+                                                                                                 password(password),
+                                                                                                 insurance(insurance),
+                                                                                                 money(money) {}
+
 //void Client::setId(const string &id) {
 //    Client::id = id;
 //}
@@ -60,7 +77,7 @@ void Client::removeInsurance(Insurance *insurance) {
 //    Client::plans = plans;
 //}
 //
-//void Client::setInsurance(const Insurance &insurance) {
+//void Client::subscribeInsurance(const Insurance &insurance) {
 //    Client::insurance = insurance;
 //}
 

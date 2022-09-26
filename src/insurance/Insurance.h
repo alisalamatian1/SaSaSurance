@@ -5,17 +5,20 @@
 #include "../client/Client.h"
 #include "Plan.h"
 #include <set>
+class Business;
 
 class Insurance {
 private:
     set <Client *> clients;
     std::string name;
     vector<Plan*> plans;
-    // todo: write the functions for transferring money from insurance account to business and subscription
     double money;
 public:
     Insurance(string name);
-    bool processRequest(double cost, Client client);
+    Insurance(const string &name, const vector<Plan *> &plans, double money);
+
+    void processRequest(double cost, Client client);
+    void processBusinessRequest(double cost, Client client, Business* business);
     void addClient(Client* client);
     void removeClient(Client* client);
     const set<Client*> &getClients() const;
@@ -26,6 +29,11 @@ public:
 
     bool checkForSubscription();
     void collectSubscriptionFee(double fee);
+    void addMoney(double fee);
+    void payClient(double payable, Client* client);
+    void payBusiness(double payable, Business* business);
+
+    double getMoney() const;
 
     bool operator==(const Insurance &rhs) const;
 

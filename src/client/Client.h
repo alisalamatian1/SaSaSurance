@@ -15,15 +15,22 @@ private:
     string name;
     string password;
     Insurance* insurance;
+    double money;
 public:
     Client(string name);
+    Client(const string &id, const string &name, const string &password, Insurance *insurance, double money);
+
+    Client(const string &name, const string &password, Insurance *insurance, double money);
+
     string getName();
     string getId();
     string getPassword();
-    Insurance* getInsurance() const;
-    void setInsurance(Insurance* insurance);
+    Insurance* getInsurance();
+    void subscribeInsurance(Insurance* insurance);
     bool raiseRequest(double cost, Client client);
     void removeInsurance(Insurance* insurance);
+    void payFees(double fee);
+    void addMoney(double claimedMoney);
 //
 //    void setId(const string &id);
 //
@@ -33,5 +40,5 @@ public:
 //
 //    void setPlans(const vector<Plan> &plans);
 //
-//    void setInsurance(const Insurance &insurance);
+//    void subscribeInsurance(const Insurance &insurance);
 };
