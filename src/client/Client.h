@@ -6,6 +6,7 @@
 #include <vector>
 #include <string>
 class Insurance;
+class Business;
 
 using namespace std;
 
@@ -21,24 +22,17 @@ public:
     Client(const string &id, const string &name, const string &password, Insurance *insurance, double money);
 
     Client(const string &name, const string &password, Insurance *insurance, double money);
+    void subscribeInsurance(Insurance* insurance);
+    bool raiseRequest(double cost, std::string planType);
+    void removeInsurance(Insurance* insurance);
+    void payInsuranceFees(double fee);
+    void payBusinessFees(double fee, Business* business);
+    void addMoney(double claimedMoney);
 
     string getName();
     string getId();
     string getPassword();
     Insurance* getInsurance();
-    void subscribeInsurance(Insurance* insurance);
-    bool raiseRequest(double cost, Client client);
-    void removeInsurance(Insurance* insurance);
-    void payFees(double fee);
-    void addMoney(double claimedMoney);
-//
-//    void setId(const string &id);
-//
-//    void setName(const string &name);
-//
-//    void setPassword(const string &password);
-//
-//    void setPlans(const vector<Plan> &plans);
-//
-//    void subscribeInsurance(const Insurance &insurance);
+    double getMoney() const;
+
 };

@@ -11,7 +11,6 @@ private:
     std::string name;
     std::string sector;
     vector<Client> clients;
-    // todo: client should be paying the business too
     double money;
 public:
     Business(string name, string sector);
@@ -21,6 +20,13 @@ public:
     void setClients(vector<Client> clients);
     void raiseRequest(double cost, Client client);
     void addMoney(double income);
-
     double getMoney() const;
+
+    const string &getName() const;
+
+    void setName(const string &name);
+
+    const string &getSector() const;
+
+    void setSector(const string &sector);
 };

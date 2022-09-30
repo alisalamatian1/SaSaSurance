@@ -12,11 +12,9 @@ Plan::Plan(double coverage, double creditLimit) {
 
 bool Plan::decreaseCredit(double usedAmount) {
     if (coverage - usedAmount < 0) {
-        // todo: after adding the money transfer functionality, we should set the coverage to 0 and send the money
-        // todo: the difference to 0 to the business and throw a warning that the coverage was not enough for the ask
-
-        throw new AmountExceedException(coverage);
-        return false;
+        double temp = coverage;
+        coverage = 0;
+        throw new AmountExceedException(temp);
     }
     this->coverage -= usedAmount;
     return true;

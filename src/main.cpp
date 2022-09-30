@@ -4,17 +4,15 @@
 #include "insurance/EyePlan.h"
 #include "insurance/Plan.h"
 #include "insurance/Insurance.h"
+#include "AmountExceedException.h"
 
 int main() {
-    // todo: adding insurance payment
     // making a client
     Client client("As");
     // making a business
     Business* business = new Business("clinic", "Eye", 100);
     // setting up an insurance with EyePlan
-//    Insurance* insurance = new Insurance("sunLife");
     EyePlan* eyePlan = new EyePlan (12, 2.0);
-//    (*insurance).addToPlan(eyePlan);
     vector<Plan*> plans;
     plans.push_back(eyePlan);
     Insurance* insurance = new Insurance("sunLife", plans, 1000);
@@ -38,6 +36,7 @@ int main() {
 
     std::cout << "changing insurance \n\n"<< std::endl;
 
+    client.addMoney(10);
     // making a new insurance to test the setClient and remove method
     Insurance* insurance2 = new Insurance("manuLife");
     EyePlan* eyePlan2 = new EyePlan (16, 2.0);
@@ -46,6 +45,35 @@ int main() {
     client.subscribeInsurance(insurance2);
     std::cout << "Name of the new insurance: " << std::endl;
     std::cout << client.getInsurance()->getName() << std::endl;
+    // paying the first month fee
+    try {
+        std::cout <<"client money before payment" << client.getMoney() << std::endl;
+        std::cout <<"insurance money before payment" << client.getInsurance()->getMoney() << std::endl;
+        client.payInsuranceFees(10);
+        std::cout <<"money after payment" << client.getMoney() << std::endl;
+        std::cout <<"insurance money after payment" << client.getInsurance()->getMoney() << std::endl;
+    } catch (AmountExceedException* e) {
+        std::cout << "client doesn't have enough money to pay" << std::endl;
+    }
+
+    // client raising a request
+    std::cout <<"client money before payment2: " << client.getMoney() << std::endl;
+    std::cout <<"insurance money before payment2: " << client.getInsurance()->getMoney() << std::endl;
+    client.raiseRequest(5, "Eye");
+    std::cout <<"money after payment2: " << client.getMoney() << std::endl;
+    std::cout <<"insurance money after payment2: " << client.getInsurance()->getMoney() << std::endl;
+
+    // client paying fees to the business
+    try {
+        std::cout <<"client money before payment to business: " << client.getMoney() << std::endl;
+        std::cout <<"Business money before payment" << business->getMoney() << std::endl;
+        client.payBusinessFees(6, business);
+        std::cout <<"Client money after payment to business: " << client.getMoney() << std::endl;
+        std::cout <<"Business money after payment: " << business->getMoney() << std::endl;
+    } catch (AmountExceedException* e) {
+        std::cout << "client doesn't have enough money to pay" << std::endl;
+    }
+
     // expecting success
     business->raiseRequest(15, client);
     std::cout << client.getInsurance()->getPlans().at(0)->getCoverage() << std::endl;

@@ -11,33 +11,23 @@ Insurance::Insurance(string name) {
     this->name = name;
 }
 
-void Insurance::processRequest(double cost, Client client) {
+void Insurance::processRequest(double cost, Client* client, std::string planType) {
     // loop over the clients
     for (auto c : clients) {
         // if id of the client is the same as the id of the current client then...
-        if (c->getId() == client.getId()){
+        if (c->getId() == client->getId()){
             // reduce the cost from the coverage
             try {
-                // todo: reduce it from the corresponding plan and not index 0
-                client.getInsurance()->getPlans().at(0)->decreaseCredit(cost);
+                for (auto p : client->getInsurance()->getPlans()) {
+                    if (p->getSector() == planType) {
+                        p->decreaseCredit(cost);
+                    }
+                }
                 payClient(cost, c);
             } catch (AmountExceedException* e) {
                 cout << "you can't spend more than your coverage" << endl;
                 payClient(e->getCoverage(), c);
-                // checking if we need to use the new keyboard
             }
-
-//            for (auto p : c.getPlans()) {
-//                if (p.getInsuranceName() == this->name) {
-//                    // decrease the cost from the client plan coverage
-//                   if (!p.decreaseCredit(cost)) {
-//                       // throw an exception if the client does not have enough coverage
-//                       throw AmountExceedException();
-//                   } else {
-//                       return true;
-//                   }
-//                }
-//            }
         }
     }
 }
@@ -49,25 +39,16 @@ void Insurance::processBusinessRequest(double cost, Client client, Business* bus
         if (c->getId() == client.getId()){
             // reduce the cost from the coverage
             try {
-                // todo: reduce it from the corresponding plan and not index 0
-                client.getInsurance()->getPlans().at(0)->decreaseCredit(cost);
+                for (auto p : client.getInsurance()->getPlans()) {
+                    if (p->getSector() == business->getSector()) {
+                        p->decreaseCredit(cost);
+                    }
+                }
                 payBusiness(cost, business);
             } catch (AmountExceedException* e) {
                 payBusiness(e->getCoverage(), business);
                 cout << "you can't spend more than your coverage" << endl;
-                // checking if we need to use the new keyboard
             }
-//            for (auto p : c.getPlans()) {
-//                if (p.getInsuranceName() == this->name) {
-//                    // decrease the cost from the client plan coverage
-//                   if (!p.decreaseCredit(cost)) {
-//                       // throw an exception if the client does not have enough coverage
-//                       throw AmountExceedException();
-//                   } else {
-//                       return true;
-//                   }
-//                }
-//            }
         }
     }
 }

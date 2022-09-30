@@ -4,6 +4,8 @@
 
 #include "Client.h"
 #include "../insurance/Insurance.h"
+#include "../business/Business.h"
+#include "../AmountExceedException.h"
 
 Client::Client(string name) {
     this->name = name;
@@ -37,6 +39,10 @@ void Client::subscribeInsurance(Insurance* insurance) {
     }
 }
 
+bool Client::raiseRequest(double cost, std::string planType) {
+    this->getInsurance()->processRequest(cost, this, planType);
+}
+
 void Client::removeInsurance(Insurance *insurance) {
     if (insurance != nullptr) {
         insurance->removeClient(this);
@@ -44,9 +50,20 @@ void Client::removeInsurance(Insurance *insurance) {
     }
 }
 
-void Client::payFees(double fee) {
+void Client::payInsuranceFees(double fee) {
+    if (money < fee) {
+        throw new AmountExceedException();
+    }
     this->money -= fee;
     this->insurance->addMoney(fee);
+}
+
+void Client::payBusinessFees(double fee, Business* business) {
+    if (money < fee) {
+        throw new AmountExceedException();
+    }
+    this->money -= fee;
+    business->addMoney(fee);
 }
 
 void Client::addMoney(double claimedMoney) {
@@ -61,23 +78,7 @@ Client::Client(const string &name, const string &password, Insurance *insurance,
                                                                                                  insurance(insurance),
                                                                                                  money(money) {}
 
-//void Client::setId(const string &id) {
-//    Client::id = id;
-//}
-//
-//void Client::setName(const string &name) {
-//    Client::name = name;
-//}
-//
-//void Client::setPassword(const string &password) {
-//    Client::password = password;
-//}
-//
-//void Client::setPlans(const vector<Plan> &plans) {
-//    Client::plans = plans;
-//}
-//
-//void Client::subscribeInsurance(const Insurance &insurance) {
-//    Client::insurance = insurance;
-//}
+double Client::getMoney() const {
+    return money;
+}
 

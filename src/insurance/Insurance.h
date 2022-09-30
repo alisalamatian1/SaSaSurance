@@ -17,7 +17,7 @@ public:
     Insurance(string name);
     Insurance(const string &name, const vector<Plan *> &plans, double money);
 
-    void processRequest(double cost, Client client);
+    void processRequest(double cost, Client* client, std::string planType);
     void processBusinessRequest(double cost, Client client, Business* business);
     void addClient(Client* client);
     void removeClient(Client* client);

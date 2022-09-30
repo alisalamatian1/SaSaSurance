@@ -4,6 +4,8 @@
 
 #include "AmountExceedException.h"
 
+AmountExceedException::AmountExceedException() {}
+
 AmountExceedException::AmountExceedException(double covered) {
     this->covered = covered;
 }

@@ -29,3 +29,19 @@ double Business::getMoney() const {
 }
 
 Business::Business(const string &name, const string &sector, double money) : name(name), sector(sector), money(money) {}
+
+const string &Business::getName() const {
+    return name;
+}
+
+void Business::setName(const string &name) {
+    Business::name = name;
+}
+
+const string &Business::getSector() const {
+    return sector;
+}
+
+void Business::setSector(const string &sector) {
+    Business::sector = sector;
+}
