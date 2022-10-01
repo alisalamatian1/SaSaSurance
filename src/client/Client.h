@@ -15,13 +15,15 @@ private:
     string id;
     string name;
     string password;
-    Insurance* insurance;
-    double money;
+    Insurance* insurance = nullptr;
+    double money = 0;
 public:
     Client(string name);
     Client(const string &id, const string &name, const string &password, Insurance *insurance, double money);
-
     Client(const string &name, const string &password, Insurance *insurance, double money);
+
+    Client(const string &name, const string &password, double money);
+
     void subscribeInsurance(Insurance* insurance);
     bool raiseRequest(double cost, std::string planType);
     void removeInsurance(Insurance* insurance);

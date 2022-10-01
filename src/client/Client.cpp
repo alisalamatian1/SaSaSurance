@@ -82,3 +82,6 @@ double Client::getMoney() const {
     return money;
 }
 
+Client::Client(const string &name, const string &password, double money) : name(name), password(password),
+                                                                           money(money) {}
+
