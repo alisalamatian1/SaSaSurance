@@ -22,3 +22,4 @@ TEST (RaiseRequest, ClaimInsurance) {
     EXPECT_EQ(1012, b.getMoney());
     EXPECT_EQ(0, insurance->getPlans()[0]->getCoverage());
 }
+
