@@ -3,4 +3,7 @@ project(SaSaSurance2)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(SaSaSurance2 src/main.cpp src/client/Client.h src/client/Client.cpp src/business/Business.h src/business/Business.cpp src/insurance/Plan.h src/insurance/EyePlan.h src/insurance/EyePlan.cpp src/insurance/Insurance.h src/insurance/Insurance.cpp src/AmountExceedException.h src/insurance/Plan.cpp src/AmountExceedException.cpp)
+add_subdirectory(src)
+add_executable(${CMAKE_PROJECT_NAME}_run main.cpp)
+add_subdirectory(Google_tests)
+target_link_libraries(${CMAKE_PROJECT_NAME}_run ${CMAKE_PROJECT_NAME}_lib)

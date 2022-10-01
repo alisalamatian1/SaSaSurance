@@ -1,10 +1,10 @@
 #include <iostream>
-#include "client/Client.h"
-#include "business/Business.h"
-#include "insurance/EyePlan.h"
-#include "insurance/Plan.h"
-#include "insurance/Insurance.h"
-#include "AmountExceedException.h"
+#include "src/client/Client.h"
+#include "src/business/Business.h"
+#include "src/insurance/EyePlan.h"
+#include "src/insurance/Plan.h"
+#include "src/insurance/Insurance.h"
+#include "src/AmountExceedException.h"
 
 int main() {
     // making a client
