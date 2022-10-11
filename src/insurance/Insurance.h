@@ -12,7 +12,10 @@ private:
     set <Client *> clients;
     std::string name;
     vector<Plan*> plans;
-    double money;
+    double money = 0;
+    void payClient(double payable, Client* client);
+    void payBusiness(double payable, Business* business);
+
 public:
     Insurance(string name);
     Insurance(const string &name, const vector<Plan *> &plans, double money);
@@ -21,21 +24,18 @@ public:
     void processBusinessRequest(double cost, Client client, Business* business);
     void addClient(Client* client);
     void removeClient(Client* client);
+    void addToPlan (Plan* plan);
+    void addMoney(double fee);
+
     const set<Client*> &getClients() const;
     vector<Plan*> getPlans();
     const string &getName() const;
-    void addToPlan (Plan* plan);
-    void setName(const string &name);
 
+    void setName(const string &name);
     bool checkForSubscription();
     void collectSubscriptionFee(double fee);
-    void addMoney(double fee);
-    void payClient(double payable, Client* client);
-    void payBusiness(double payable, Business* business);
-
     double getMoney() const;
 
     bool operator==(const Insurance &rhs) const;
-
     bool operator!=(const Insurance &rhs) const;
 };

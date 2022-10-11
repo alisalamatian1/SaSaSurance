@@ -7,8 +7,8 @@
 class Plan {
 protected:
     std::string sector;
-    double coverage;
-    double creditLimit;
+    double coverage = 0;
+    double creditLimit = 0;
 public:
     Plan(double coverage, double creditLimit);
     bool decreaseCredit(double usedAmount);

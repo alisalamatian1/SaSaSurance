@@ -11,7 +11,7 @@ private:
     std::string name;
     std::string sector;
     vector<Client> clients;
-    double money;
+    double money = 0;
 public:
     Business(string name, string sector);
     Business(string name, string sector, vector<Client> clients);
