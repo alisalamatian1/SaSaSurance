@@ -85,5 +85,11 @@ int main() {
     // expecting a warning that we cannot spend more than our coverage
     business->raiseRequest(1, client);
 
+    // deleting the pointers
+    delete business;
+    delete eyePlan;
+    delete eyePlan2;
+    delete insurance;
+    delete insurance2;
     return 0;
 }
