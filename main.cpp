@@ -91,5 +91,10 @@ int main() {
     delete eyePlan2;
     delete insurance;
     delete insurance2;
+    business = nullptr;
+    eyePlan = nullptr;
+    eyePlan2 = nullptr;
+    insurance = nullptr;
+    insurance2 = nullptr;
     return 0;
 }

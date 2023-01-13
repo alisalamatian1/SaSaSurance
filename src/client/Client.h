@@ -21,8 +21,9 @@ public:
     Client(string name);
     Client(const string &id, const string &name, const string &password, Insurance *insurance, double money);
     Client(const string &name, const string &password, Insurance *insurance, double money);
-
     Client(const string &name, const string &password, double money);
+    Client(const Client & passedClient);
+    ~Client();
 
     void subscribeInsurance(Insurance* insurance);
     bool raiseRequest(double cost, std::string planType);
@@ -36,5 +37,4 @@ public:
     string getPassword();
     Insurance* getInsurance();
     double getMoney() const;
-
 };

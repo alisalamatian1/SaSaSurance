@@ -12,6 +12,26 @@ Client::Client(string name) {
     this->insurance = nullptr;
 }
 
+Client::Client(const Client & passedClient) {
+    id = passedClient.id;
+    name = passedClient.name;
+    password = passedClient.password;
+    money = passedClient.money;
+    if (passedClient.insurance->getPlans().empty()) {
+        insurance = new Insurance(passedClient.insurance->getName());
+    } else {
+        insurance = new Insurance(passedClient.insurance->getName(), passedClient.insurance->getPlans(), passedClient.money);
+    }
+}
+
+Client::~Client() {
+    if (insurance != nullptr) {
+        if (insurance->getName() != "") {
+            delete insurance;
+        }
+    }
+}
+
 string Client::getName() {
     return this->name;
 }
