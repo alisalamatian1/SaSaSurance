@@ -84,6 +84,10 @@ int main() {
 
     // expecting a warning that we cannot spend more than our coverage
     business->raiseRequest(1, client);
+    // testing the overloaded = operator
+    Client c11("2", "b", "test", insurance2, 1);
+    Client c12("c");
+    c12 = c11;
 
     // deleting the pointers
     delete business;

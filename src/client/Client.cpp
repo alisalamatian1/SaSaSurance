@@ -13,6 +13,10 @@ Client::Client(string name) {
 }
 
 Client::Client(const Client & passedClient) {
+    copyClient(passedClient);
+}
+
+void Client::copyClient(const Client &passedClient) {
     id = passedClient.id;
     name = passedClient.name;
     password = passedClient.password;
@@ -24,12 +28,25 @@ Client::Client(const Client & passedClient) {
     }
 }
 
-Client::~Client() {
+void Client::deleteClient() {
     if (insurance != nullptr) {
         if (insurance->getName() != "") {
             delete insurance;
         }
     }
+}
+
+Client::~Client() {
+    deleteClient();
+}
+
+
+Client& Client::operator=(const Client &assignment) {
+    if (this != &assignment) {
+        deleteClient();
+        copyClient(assignment);
+    }
+    return *this;
 }
 
 string Client::getName() {

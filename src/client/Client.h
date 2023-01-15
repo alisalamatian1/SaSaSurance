@@ -17,11 +17,14 @@ private:
     string password;
     Insurance* insurance = nullptr;
     double money = 0;
+    void copyClient(const Client &passedClient);
+    void deleteClient();
 public:
     Client(string name);
     Client(const string &id, const string &name, const string &password, Insurance *insurance, double money);
     Client(const string &name, const string &password, Insurance *insurance, double money);
     Client(const string &name, const string &password, double money);
+    Client & operator=(const Client & assignment);
     Client(const Client & passedClient);
     ~Client();
 
